@@ -1,0 +1,53 @@
+body{
+	background-color: #65E7ED;
+}
+a {
+	text-decoration: none
+}
+#logo-text{
+	color: #305FD4;
+	text-align: center;
+	font-family: "Georgia";
+	font-size: 150%;
+}
+#info{
+	text-align: left;
+	color: #4212D0;
+	border: 1px solid #305FD4;
+	padding: 0.6em;
+	margin: 0.5em;
+	background-color: #9DB7F7;
+}
+#calendar{
+	text-align: center;
+}
+#month-table{
+	
+}
+#month-table a{
+	cursor: default;
+}
+#month-table td{
+	color: #2c0c8a;
+	text-align: center;
+}
+#month-table .d{
+	padding: 0.43em;
+	color: #4212D0;
+	border: 1px solid #5C31DE;
+}
+.days{
+	background-color: #9DB7F7;
+	padding: 0.2em;
+}
+.month{
+	display: inline-block;
+	min-width: 16.2em;
+	min-height: 17.4em;
+	text-align: center;
+	color: #4212D0;
+	border: 1px solid #305FD4;
+	padding: 0.6em;
+	margin: 0.5em;
+	background-color: #9DB7F7;
+}
