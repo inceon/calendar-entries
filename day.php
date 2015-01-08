@@ -1,7 +1,7 @@
-<!DOCTYPE>
+п»ї<!DOCTYPE>
 <html>
 <head> 
-<title>Календарь подій</title>
+<title>РљР°Р»РµРЅРґР°СЂ РїРѕРґС–Р№</title>
 <link rel="stylesheet" type="text/css" href="style.css" /> 
 <script type="text/javascript" src="jquery-2.1.3.min.js"> </script>
 <script type="text/javascript" src="main.js"> </script>
@@ -15,17 +15,33 @@
 	if (!isset($m) OR $m < 1 OR $m > 12) $m=date("m");
 	if (!isset($d) OR $d < 1 OR $d > 31) $d=date("d");
 
-	echo "<div id=\"logo-text\">$d.$m.$y</div>";
+	echo "<a href='index.php'><div id=\"logo-text\">".str_pad($d, 2, '0', STR_PAD_LEFT).".".str_pad($m, 2, '0', STR_PAD_LEFT).".$y</div></a>";
 	echo '<div id="calendar">';
 	
 	$content = file ('data/'.$m.'.txt');
-	foreach ($content as $line) { // читаем построчно
-		$result = explode ('::', $line); // разбиваем строку и записываем в массив
-		if($result[0]==$y && $result[1]==$d){
-			echo '<div id="info"><pre>';
-			print_r($result);
-			echo '</pre></div>';
+	
+	for($i=8;$i<=18;$i++){
+		foreach ($content as $line) { 
+			$result = explode ('::', $line); 
+			if($result[0]==$y && $result[1]==$d && $result[2]==$i.':00'){
+				$entrys[0] = $result;
+			}
+			if($result[0]==$y && $result[1]==$d && $result[2]==$i.':30'){
+				$entrys[1] = $result;
+			}
+		}
+		if(!empty($entrys[0]) && $entrys[0][2]==$i.':00'){
+			echo '<div class="busy">'.$i.':00 <div class="info"></div></div>';
+		}else{
+			echo '<div class="free">'.$i.':00 <div class="info">Р’С–Р»СЊРЅРѕ<a href="record.php?year='.$y.'&month='.$m.'&day='.$d.'&time='.$i.':00" class="record">Р—Р°РїРёСЃР°С‚РёСЃСЏ</a></div></div>';
+		}
+		if(!empty($entrys[1]) && $entrys[1][2]==$i.':30'){
+			echo '<div class="busy">'.$i.':30 <div class="info"></div></div>';
+		}else{
+			echo '<div class="free">'.$i.':30 <div class="info">Р’С–Р»СЊРЅРѕ<a href="record.php?year='.$y.'&month='.$m.'&day='.$d.'&time='.$i.':30" class="record">Р—Р°РїРёСЃР°С‚РёСЃСЏ</a></div></div>';
 		}
 	}
 	echo '</div>';
 ?>	
+</body>
+</html>

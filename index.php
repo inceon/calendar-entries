@@ -1,17 +1,17 @@
-<!DOCTYPE>
+п»ї<!DOCTYPE>
 <html>
 <head> 
-<title>Календарь подій</title>
+<title>РљР°Р»РµРЅРґР°СЂ РїРѕРґС–Р№</title>
 <link rel="stylesheet" type="text/css" href="style.css" /> 
 <script type="text/javascript" src="jquery-2.1.3.min.js"> </script>
 <script type="text/javascript" src="main.js"> </script>
 </head>
 <body>
-<div id="logo-text">Розпорядок записів</div>
+<div id="logo-text">Р РѕР·РїРѕСЂСЏРґРѕРє Р·Р°РїРёСЃС–РІ</div>
 <div id="calendar">
 <?php
 	include_once("days.php");
-	$month = array('Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень');
+	$month = array('РЎС–С‡РµРЅСЊ', 'Р›СЋС‚РёР№', 'Р‘РµСЂРµР·РµРЅСЊ', 'РљРІС–С‚РµРЅСЊ', 'РўСЂР°РІРµРЅСЊ', 'Р§РµСЂРІРµРЅСЊ', 'Р›РёРїРµРЅСЊ', 'РЎРµСЂРїРµРЅСЊ', 'Р’РµСЂРµСЃРµРЅСЊ', 'Р–РѕРІС‚РµРЅСЊ', 'Р›РёСЃС‚РѕРїР°Рґ', 'Р“СЂСѓРґРµРЅСЊ');
 	$year = date('Y');
 
 	for($i = intval(date('m'));$i<=12;$i++)
@@ -21,3 +21,4 @@
 ?>
 </div>
 </body>
+</html>

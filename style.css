@@ -8,21 +8,14 @@ a {
 	color: #305FD4;
 	text-align: center;
 	font-family: "Georgia";
+	font-weight: bold;
 	font-size: 150%;
-}
-#info{
-	text-align: left;
-	color: #4212D0;
-	border: 1px solid #305FD4;
-	padding: 0.6em;
-	margin: 0.5em;
-	background-color: #9DB7F7;
 }
 #calendar{
 	text-align: center;
 }
 #month-table{
-	
+	display:  table;
 }
 #month-table a{
 	cursor: default;
@@ -35,6 +28,73 @@ a {
 	padding: 0.43em;
 	color: #4212D0;
 	border: 1px solid #5C31DE;
+}
+
+#record-form{
+	background-color: #9DB7F7;
+	padding: 1em;
+	padding-left: 40%;
+	text-align: left;
+	
+}
+#record-form input, #record-form textarea{
+	background-color: #f2f2f2;
+	border: 1px dotted black;
+	width: 20em;
+	height: 2em;
+}
+#record-form input[type='submit']{
+	background-color: #cccccc;
+}
+#record-form textarea{
+	height: 5em;
+}
+
+.busy, .free{
+	display: inline-block;
+	min-width: 16.2em;
+	min-height: 15em;
+	
+	font-weight: bold;
+    font-style: italic;
+	color: #4212D0;
+	border: 1px solid #305FD4;
+	padding: 0.6em;
+	margin: 0.5em;
+}
+.free{
+	background-color: #FFFE6E;
+}
+.busy{
+	background-color: #FF796E;
+}
+.error{
+	background-color: #FF796E;
+	font-weight: bold;
+    font-style: italic;
+	color: #4212D0;
+	border: 1px solid #305FD4;
+	padding: 0.6em;
+	margin: 0.5em;
+}
+.info{
+	position: absolute;
+	min-width: 16.2em;
+	min-height: 14em;
+
+	text-align: left;
+}
+.record{
+    position: absolute; 
+	bottom: 0; left: 0;
+	min-width: 92%;
+	text-align: center;
+    background: rgba(255,255,230,0.9);
+	color: black;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
 }
 .days{
 	background-color: #9DB7F7;

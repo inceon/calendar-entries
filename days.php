@@ -1,4 +1,4 @@
-<? 
+ï»¿<? 
 function my_calendar($y, $m) { 
 	if (!isset($y) OR $y < 1970 OR $y > 2037) $y=date("Y");
 	if (!isset($m) OR $m < 1 OR $m > 12) $m=date("m");
@@ -12,7 +12,7 @@ function my_calendar($y, $m) {
 	if ($last==0) $end=$day_count; else $end=$day_count+7-$last;
 	$i=0;
 	$result = "<table id='month-table'>";
-	$result .= "<tr><td>Ïí</td><td>Âò</td><td>Ñğ</td><td>×ò</td><td>Ïò</td><td>Ñá</td><td>Âñ</td><tr>";
+	$result .= "<tr><td>ĞŸĞ½</td><td>Ğ’Ñ‚</td><td>Ğ¡Ñ€</td><td>Ğ§Ñ‚</td><td>ĞŸÑ‚</td><td>Ğ¡Ğ±</td><td>Ğ’Ñ</td><tr>";
 	
 	for($d=$start;$d<=$end;$d++) { 
 		if (!($i++ % 7)) $result .= "<tr>\n";
