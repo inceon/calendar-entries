@@ -1,4 +1,5 @@
-﻿<!DOCTYPE>
+﻿<? include_once('config.php') ?>
+<!DOCTYPE>
 <html>
 <head> 
 <title>Календар подій</title>

@@ -1,6 +1,6 @@
-2015::25::12:30::name::sername::+380660000000::other info::
-2015::25::11:20::name::sername::+380660000000::other info::
-2015::25::12:00::name::sername::+380660000000::other info::
-2015::25::17:00::name::sername::+380660000000::other info::
-2015::25::15:30::name::sername::+380660000000::other info::
-2015::25::8:30::name::sername::+380660000000::other info::
+2015::25::12:30::name::sername::+380660000000::other info
+2015::25::11:20::name::sername::+380660000000::other info
+2015::25::12:00::name::sername::+380660000000::other info
+2015::25::17:00::name::sername::+380660000000::other info
+2015::25::15:30::name::sername::+380660000000::other info
+2015::25::8:30::name::sername::+380660000000::other info

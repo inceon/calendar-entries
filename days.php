@@ -16,11 +16,15 @@ function my_calendar($y, $m) {
 	
 	for($d=$start;$d<=$end;$d++) { 
 		if (!($i++ % 7)) $result .= "<tr>\n";
+		
 		$result .= '<td>';
 		if ($d < 1 OR $d > $day_count) {
 			$result .= "<div class=\"d\">&nbsp</div>";
 		} else {
-			$result .= '<a href="day.php?year='.$y.'&month='.$m.'&day='.$d.'"><div class="d">'.$d.'</div></a>';
+			$vd = date("w",strtotime("$d.$m.$y"));
+			$result .= '<a href="day.php?year='.$y.'&month='.$m.'&day='.$d.'"><div class="d">';
+			$result .= ($vd==6 || $vd==0)?'<span style="color:red">'.$d.'</span>':$d;
+			$result .= '</div></a>';
 		} 
 		$result .= "</td>\n";
 		if (!($i % 7))  $result .= "</tr>\n";

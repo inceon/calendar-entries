@@ -1,4 +1,5 @@
-﻿<!DOCTYPE>
+﻿<? include_once('config.php') ?>
+<!DOCTYPE>
 <html>
 <head> 
 <title>Календар подій</title>
@@ -20,7 +21,7 @@
 	
 	$content = file ('data/'.$m.'.txt');
 	
-	for($i=8;$i<=18;$i++){
+	for($i=$startDay;$i<=$endDay;$i++){
 		foreach ($content as $line) { 
 			$result = explode ('::', $line); 
 			if($result[0]==$y && $result[1]==$d && $result[2]==$i.':00'){
@@ -31,14 +32,14 @@
 			}
 		}
 		if(!empty($entrys[0]) && $entrys[0][2]==$i.':00'){
-			echo '<div class="busy">'.$i.':00 <div class="info"></div></div>';
+			echo '<div class="busy">'.$i.':00 <div class="info">'.ucfirst($result[4]).' '.ucfirst($result[3]).' <br /><br />'.ucfirst($result[6]).'</div></div>';
 		}else{
-			echo '<div class="free">'.$i.':00 <div class="info">Вільно<a href="record.php?year='.$y.'&month='.$m.'&day='.$d.'&time='.$i.':00" class="record">Записатися</a></div></div>';
+			echo '<div class="free">'.$i.':00 <div class="info"><a href="record.php?year='.$y.'&month='.$m.'&day='.$d.'&time='.$i.':00" class="record">Записатися</a></div></div>';
 		}
 		if(!empty($entrys[1]) && $entrys[1][2]==$i.':30'){
-			echo '<div class="busy">'.$i.':30 <div class="info"></div></div>';
+			echo '<div class="busy">'.$i.':30 <div class="info">'.ucfirst($result[4]).' '.ucfirst($result[3]).' <br /><br />'.ucfirst($result[6]).'</div></div>';
 		}else{
-			echo '<div class="free">'.$i.':30 <div class="info">Вільно<a href="record.php?year='.$y.'&month='.$m.'&day='.$d.'&time='.$i.':30" class="record">Записатися</a></div></div>';
+			echo '<div class="free">'.$i.':30 <div class="info"><a href="record.php?year='.$y.'&month='.$m.'&day='.$d.'&time='.$i.':30" class="record">Записатися</a></div></div>';
 		}
 	}
 	echo '</div>';

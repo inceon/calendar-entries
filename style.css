@@ -25,6 +25,7 @@ a {
 	text-align: center;
 }
 #month-table .d{
+	font-weight: bold;
 	padding: 0.43em;
 	color: #4212D0;
 	border: 1px solid #5C31DE;
@@ -52,9 +53,9 @@ a {
 
 .busy, .free{
 	display: inline-block;
-	min-width: 16.2em;
-	min-height: 15em;
-	
+	min-width: 15em;
+	min-height: 8em;
+	text-overflow: ellipsis;
 	font-weight: bold;
     font-style: italic;
 	color: #4212D0;
@@ -85,9 +86,9 @@ a {
 	text-align: left;
 }
 .record{
-    position: absolute; 
-	bottom: 0; left: 0;
-	min-width: 92%;
+    position: absolute;
+	top: 7.9em; left: 0em;
+	min-width: 82%;
 	text-align: center;
     background: rgba(255,255,230,0.9);
 	color: black;
