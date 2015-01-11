@@ -23,7 +23,7 @@ function my_calendar($y, $m) {
 		} else {
 			$vd = date("w",strtotime("$d.$m.$y"));
 			$result .= '<a href="day.php?year='.$y.'&month='.$m.'&day='.$d.'"><div class="d">';
-			$result .= ($vd==6 || $vd==0)?'<span style="color:red">'.$d.'</span>':$d;
+			$result .= ($vd==6 || $vd==0)?'<span style="color: #d43134">'.$d.'</span>':$d;
 			$result .= '</div></a>';
 		} 
 		$result .= "</td>\n";

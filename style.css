@@ -30,6 +30,11 @@ a {
 	color: #4212D0;
 	border: 1px solid #5C31DE;
 }
+#month-table .d:hover{
+	-webkit-box-shadow: inset 0px 0px 5px 0px rgba(100,100,100,0.75);
+	-moz-box-shadow: inset 0px 0px 5px 0px rgba(100,100,100,0.75);
+	box-shadow: inset 0px 0px 5px 0px rgba(100,100,100,0.75);
+}
 
 #record-form{
 	background-color: #9DB7F7;
@@ -62,6 +67,12 @@ a {
 	border: 1px solid #305FD4;
 	padding: 0.6em;
 	margin: 0.5em;
+		-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 .free{
 	background-color: #FFFE6E;
@@ -104,11 +115,36 @@ a {
 .month{
 	display: inline-block;
 	min-width: 16.2em;
-	min-height: 17.4em;
+	min-height: 18em;
+	height: 18em;
 	text-align: center;
 	color: #4212D0;
 	border: 1px solid #305FD4;
 	padding: 0.6em;
 	margin: 0.5em;
 	background-color: #9DB7F7;
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.month:before, .month:after {
+    content:"";
+    position:absolute;
+    z-index:-2;
+}
+.del-add{
+	position: absolute; 
+	right: 1em; 
+	margin-top: -4.5em;
+	font-size: 120%;  
+	color: black;
+}
+.del-add a{
+	color: black; 
+	border-radius: 2em; 
+	padding: 0 0.4em 0.1em 0.4em; 
+	border: 1px solid black;
 }

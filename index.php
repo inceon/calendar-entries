@@ -18,7 +18,7 @@
 	for($i = intval(date('m'));$i<=12;$i++)
 		echo '<div class="month">'.$month[$i-1].', '.$year.'<div class="days">'.my_calendar($year, $i).'</div></div>';
 	for($i = 1;$i<date('m');$i++)
-		echo '<div class="month">'.$month[$i-1].', '.$year+1 .'<div class="days">'.my_calendar($year, $i).'</div></div>';
+		echo '<div class="month">'.$month[$i-1].', '.$year+1 .'<div class="days">'.my_calendar($year+1, $i).'</div></div>';
 ?>
 </div>
 </body>
