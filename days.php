@@ -14,6 +14,9 @@ function my_calendar($y, $m) {
 	$result = "<table id='month-table'>";
 	$result .= "<tr><td>Пн</td><td>Вт</td><td>Ср</td><td>Чт</td><td>Пт</td><td>Сб</td><td>Вс</td><tr>";
 	
+	$content = file ('data/'.$m.'.txt');
+	require('config.php');
+	
 	for($d=$start;$d<=$end;$d++) { 
 		if (!($i++ % 7)) $result .= "<tr>\n";
 		
@@ -22,7 +25,14 @@ function my_calendar($y, $m) {
 			$result .= "<div class=\"d\">&nbsp</div>";
 		} else {
 			$vd = date("w",strtotime("$d.$m.$y"));
-			$result .= '<a href="day.php?year='.$y.'&month='.$m.'&day='.$d.'"><div class="d">';
+			$count = 0;
+			foreach ($content as $line) { 
+				$res = explode ('::', $line);
+				if($res[1]==$d) $count++;
+			}
+			$proc = ($count==0)?0:($count/$entries)*100;
+			$result .= '<a href="day.php?year='.$y.'&month='.$m.'&day='.$d.'"><div class="d" onmouseover="this.style.backgroundImage=\'linear-gradient(to top, rgba(220,220,220,0.5) '.$proc.'%, rgba(255, 255, 255, 0) '.$proc.'%, rgba(255, 255, 255, 0) 100%, rgba(220,220,220,0.5) 100%)\';" 
+    onmouseout="this.style.backgroundImage=\'linear-gradient(to top, rgba(220,220,220,0.5) 0%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%, rgba(220,220,220,0.5) 100%)\';">';
 			$result .= ($vd==6 || $vd==0)?'<span style="color: #d43134">'.$d.'</span>':$d;
 			$result .= '</div></a>';
 		} 

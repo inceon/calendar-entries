@@ -15,7 +15,7 @@ a {
 	text-align: center;
 }
 #month-table{
-	display:  table;
+
 }
 #month-table a{
 	cursor: default;
@@ -31,6 +31,7 @@ a {
 	border: 1px solid #5C31DE;
 }
 #month-table .d:hover{
+	/*background-image: linear-gradient(to top, rgba(220,220,220,0.5) 20%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 100%, rgba(220,220,220,0.5) 100%);*/
 	-webkit-box-shadow: inset 0px 0px 5px 0px rgba(100,100,100,0.75);
 	-moz-box-shadow: inset 0px 0px 5px 0px rgba(100,100,100,0.75);
 	box-shadow: inset 0px 0px 5px 0px rgba(100,100,100,0.75);

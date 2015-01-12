@@ -11,7 +11,7 @@
 <div id="logo-text">Розпорядок записів</div>
 <div id="calendar">
 <?php
-	include_once("days.php");
+	include_once('days.php');
 	$month = array('Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень');
 	$year = date('Y');
 
